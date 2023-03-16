@@ -1,5 +1,5 @@
 # S2_Java-Lab
-## Array:
+### Program_1 > Array:
   insert 5 elements
   dispaly array
   sort array
