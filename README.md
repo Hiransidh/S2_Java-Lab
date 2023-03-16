@@ -1,5 +1,5 @@
 # S2_Java-Lab
-### Program_1 > Array:
+### Program > Array:
   insert 5 elements
   display array
   sort array
