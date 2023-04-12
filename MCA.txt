@@ -1,0 +1,80 @@
+import java.util.Scanner;
+class MCA
+        {
+        String dept;
+        String hod;
+        int strength;
+
+        void getDetails()
+                {
+                Scanner input = new Scanner(System.in);
+                System.out.println("Enter department name: ");
+                dept = input.next();
+                System.out.println("Enter name of HOD: ");
+                hod = input.next();
+                System.out.println("Enter strength: ");
+                strength=input.nextInt();
+                }
+        void displayDetails()
+                {
+                System.out.println("Department name : "+dept);
+                System.out.println("HOD : "+hod);
+                System.out.println("Strength : "+strength);
+                }
+        }
+class S1 extends MCA
+        {
+        String stdname;
+        int rollno;
+        String address;
+
+        void readStudents()
+                {
+                Scanner input =new Scanner(System.in);
+                System.out.println("Enter student name: ");
+                stdname=input.next();
+                System.out.println("Enter roll no: ");
+                rollno=input.nextInt();
+                System.out.println("Enter adddress: ");
+                address=input.next();
+                }
+        void displayAlldetails()
+                {
+                displayDetails();
+                System.out.println("Student details: ");
+                System.out.println("name: "+stdname+" , Rollno: "+rollno+" , Address: "+address);
+                }
+        }
+class MOOC extends S1
+ {
+        String subject;
+        int duration;
+
+        void readMooc()
+                {
+                Scanner input=new Scanner(System.in);
+                System.out.println("Enter MOOC subject: ");
+                subject=input.next();
+                System.out.println("Enter MOOC duration: ");
+                duration=input.nextInt();
+                }
+        void displayAlldetails()
+                {
+                super.displayAlldetails();
+                System.out.println("MOOC DETAILS:");
+                System.out.println("Subject: "+subject);
+                System.out.println("Duration: "+duration);
+                }
+        }
+class Main
+        {
+        public static void main(String args[])
+                {
+                MOOC mooc=new MOOC();
+                mooc.getDetails();
+                mooc.readStudents();
+                mooc.readMooc();
+                mooc.displayAlldetails();
+                }
+        }
+                   
