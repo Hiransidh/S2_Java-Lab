@@ -1,3 +1,4 @@
+import java.util.Scanner;
 class ComplexNum{
     int r,i;
     ComplexNum(){
@@ -20,8 +21,16 @@ class main
         {
          public static void main(String args[])
         {
-        ComplexNum c1=new ComplexNum(8, 04);
-        ComplexNum c2=new ComplexNum(2, 06);
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter real and imaginary part of first complex number: ");
+        int r1 =scanner.nextInt();
+        int i1=scanner.nextInt();
+        ComplexNum c1=new ComplexNum(r1,i1);
+        System.out.println("Enter the real and imaginary part of second complex number: ");
+        int r2 =scanner.nextInt();
+        int i2=scanner.nextInt();
+        ComplexNum c2=new ComplexNum(r2, i2);
         System.out.println("first complex number:");
         c1.Display();
         System.out.println("second complex number:");
